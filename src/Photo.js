@@ -4,7 +4,7 @@ function Image(props) {
     const {image} = props;
     return (
         <div>
-            <img src={image.url} alt={toString(image.url)}></img>
+            <img src={image.url} alt={toString(image.hdurl)}></img>
         </div>
     );
 }

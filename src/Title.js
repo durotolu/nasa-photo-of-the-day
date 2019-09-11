@@ -6,7 +6,6 @@ const fontWeight = {
 
 function Title(props) {
     const {title} = props;
-    debugger
     return (
         <div>
             <p style={fontWeight}>{title.title}</p>
