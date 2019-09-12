@@ -9,11 +9,12 @@ import Description from "./Description";
 
 let newApi = '';
 
-const api = 'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY' + newApi;
+const api = 'https://lambda-github-api-server.herokuapp.com/' + newApi;
 
 function App() {
   
   let [newData, setData] = useState('');
+  let [newApi, handleChange] = useState()
   
 
   useEffect(() => {
@@ -23,11 +24,11 @@ function App() {
     })
   }, []);
 
-  const handleChange = (e) => {
-    console.log(newData.date);
-    newApi = '&date=$' + '2019-09-10';
-    console.log(api);
-  }
+  useState (() => {
+    //console.log(newData.date);
+    handleChange(newApi = '&date=$' + '2019-09-10');
+    //console.log(api);
+  })
 
   return (
     <div className="App">

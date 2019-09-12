@@ -1,11 +1,20 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const ImageStyle = styled.div`
+    width: 100vw;
+
+    img {
+        opacity: 0.7;
+    }
+`
 
 function Image(props) {
     const {image} = props;
     return (
-        <div>
+        <ImageStyle>
             <img src={image.url} alt={toString(image.hdurl)}></img>
-        </div>
+        </ImageStyle>
     );
 }
 

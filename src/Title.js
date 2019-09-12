@@ -1,8 +1,11 @@
 import React from 'react';
+import styed from 'styled-components';
 
 const fontWeight = {
     fontWeight: 'bold'
 }
+
+
 
 function Title(props) {
     const {title} = props;
