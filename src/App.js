@@ -6,6 +6,12 @@ import Date from "./Date";
 import Image from "./Photo";
 import Title from "./Title";
 import Description from "./Description";
+import styled from 'styled-components';
+
+const AppStyle = styled.div`
+  background-color: yellow;
+  opacity: 0.8;
+`
 
 let newApi = '';
 
@@ -31,13 +37,13 @@ function App() {
   })
 
   return (
-    <div className="App">
+    <AppStyle className="App">
       <Header />
       <Date date={newData} handleChange={handleChange} />
       <Image image={newData} />
       <Title title={newData} />
       <Description description={newData} />
-    </div>
+    </AppStyle>
   );
 }
 
